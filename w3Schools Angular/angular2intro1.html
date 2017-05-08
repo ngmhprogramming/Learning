@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="" ng-init="input='Edit the paragraph below here.'">
+            <p>Input: <input type="text" ng-model="input"></p>
+            <p>Your input is: <span ng-bind="input"></span></p>
+            <p>Your input is: <span>{{ input }}</span></p>
+            <p>Value 1: <input type="number" ng-model="value1"></p>
+            <p>Value 2: <input type="number" ng-model="value2"></p>
+            <p>The sum is: <span>{{ value1*value2 }}</span></p>
+        </div>
+    </body>
+</html>
+<!-- How this works -->
+<!-- ng-model takes the value of the field and puts it in the variable -->
+<!-- ng-bind takes the variable and sets the innerHTML to that value -->
+<!-- An expression does the same thing as ng-bind -->

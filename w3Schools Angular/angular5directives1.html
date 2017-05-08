@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="" ng-init="name='Toom Tang';countries=['Jamaica','America','Singapore','France','Thailand','Hong Kong', 'Taiwan','South Korea'];languages=[{name: 'C#', skill: 'None'},{name: 'JavaScript', skill: 'Some'},{name: 'Python', skill: 'Quite a lot'},{name: 'Java', skill: 'None'},{name: 'Swift', skill: 'Quite a bit'}]">
+            <p>Name: <input type="text" ng-model="name"></p>
+            <p>You typed: {{ name }}</p>
+            <p>Value 1: <input type="number" ng-model="value1"></p>
+            <p>Value 2: <input type="number" ng-model="value2"></p>
+            <p>Product: {{ value1 * value2 }}</p>
+            <ul>
+                <li ng-repeat="country in countries">{{ country }}</li>
+            </ul>
+            <ul>
+                <li ng-repeat="language in languages">{{ language.name + ", " + language.skill }}</li>
+            </ul>
+        </div>
+    </body>
+</html>
+<!-- How this works -->
+<!-- ng-app tells AngularJS that the <div> element owns it -->
+<!-- Data binding binds the product of the two numbers together -->
+<!-- ng-repeat loops over the stuff and clones the element for each of them -->

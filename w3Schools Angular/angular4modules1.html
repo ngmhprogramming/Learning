@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="myApp" ng-controller="myController" style="background-color: {{ colour }}">
+            <p>The background colour has been changed to: {{ colour }}</p>
+            <p>The result of the multiplication is: {{ fNum * sNum }}</p>
+        </div>
+        <script>
+            var app = angular.module("myApp",[]);
+            app.controller("myController",function($scope){
+                $scope.colour = "#BADA55";
+                $scope.fNum = 25;
+                $scope.sNum = 37;
+            });
+        </script>
+    </body>
+</html>
+<!-- How this works -->
+<!-- The name parameter of the app tells where the code is going to run -->
+<!-- The app controller sets variables and stuff instead of ng-init -->

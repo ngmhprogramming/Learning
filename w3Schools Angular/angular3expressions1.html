@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="" ng-init="quantity=15;cost=15;fName='Toom';sName='Tang';person={IQ:'A lot', Brains:'None'};names=['Bob','James','Winston']">
+            <p>Value 1: <input type="number" ng-model="value1"></p>
+            <p>Value 2: <input type="number" ng-model="value2"></p>
+            <p>The sum is: <span>{{ value1*value2 }}</span></p>
+            <p>Colour displayer: <input style="background-color:{{ colour }}" ng-model="colour" value="{{ colour }}"></p>
+            <p>Total in dollars: ${{ quantity * cost }}</p>
+            <p>Total in dollars: $<span ng-bind="quantity * cost"></span></p>
+            <p>The name is {{ fName + " " + sName}}</p>
+            <p>The name is <span ng-bind="fName + ' ' + sName"></span></p>
+            <p>The person's IQ is: {{ person.IQ }}</p>
+            <p>The person's Brains are: {{ person.Brains}}</p>
+            <p>The second name is {{ names[1] }}</p>
+            <p>The second name is <span ng-bind="names[1]"></span></p>
+        </div>
+    </body>
+</html>
+<!-- How this works -->
+<!-- colour changes the CSS attribute to its value -->
+<!-- JavaScript numbers, strings, objects and arrays act the same -->

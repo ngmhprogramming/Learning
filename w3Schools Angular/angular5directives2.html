@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    </head>
+    <body ng-app="myApp">
+        <test-directive></test-directive>
+        <div test-directive></div>
+        <div class="test-directive"></div>
+        <!-- directive: test-directive -->
+        <script>
+            var app = angular.module("myApp", []);
+            app.directive("testDirective", function() {
+                return {
+                    restrict: "EACM",
+                    template : "<h1>Directive Works!</h1>"
+                };
+            });
+        </script>
+    </body>
+</html>
+<!-- How this works -->
+<!-- ng-app tells AngularJS that the <div> element owns it -->
+<!-- Data binding binds the product of the two numbers together -->
+<!-- ng-repeat loops over the stuff and clones the element for each of them -->
+<!-- restrict controls what can call the directive using E, A, C, M -->
+<!-- For some reason, M for comment is not working -->
